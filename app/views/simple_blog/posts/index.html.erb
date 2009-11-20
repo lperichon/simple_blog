@@ -1,0 +1,10 @@
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+  <h2><%= h post.subject %></h2>
+  <%= h post.body %>
+  <h3>Comments</h3>
+  <% post.comments.each do |comment| %>
+    <%= h comment.body %><br/>
+    <br/>
+  <% end %>
+<% end %>
