@@ -1,0 +1,6 @@
+<h2>New Comment</h2>
+
+<% form_for [@post, @comment] do |form| %>
+  <%= render :partial => 'form', :object => form %>
+  <%= form.submit 'Create', :disable_with => 'Please wait...' %>
+<% end %>

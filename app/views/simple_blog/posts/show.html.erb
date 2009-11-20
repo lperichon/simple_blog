@@ -1,1 +1,10 @@
 <%= render :partial => 'post' %>
+<h3>Leave a comment</h3>
+<% form_for [@post, @post.comments.build] do |form| %>
+  <%= form.error_messages %>
+  <div class="text_area_field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <%= form.submit 'Create', :disable_with => 'Please wait...' %>
+<% end %>
