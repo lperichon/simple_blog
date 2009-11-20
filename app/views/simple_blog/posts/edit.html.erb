@@ -1,0 +1,6 @@
+<h2>Edit Post</h2>
+
+<% form_for @post do |form| %>
+  <%= render :partial => 'form', :object => form %>
+  <%= form.submit 'Update', :disable_with => 'Please wait...' %>
+<% end %>
